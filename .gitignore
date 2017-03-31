@@ -1,5 +1,3 @@
-syntax: glob
-
 *.a
 *.bak
 *.exe
@@ -10,7 +8,5 @@ syntax: glob
 *.orig
 *.s
 *.sublime-workspace
-
 .gradle
-
 commands.html
