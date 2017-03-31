@@ -11,7 +11,7 @@ task build_module << {
 
 	def proc = command.execute()
 	proc.in.eachLine  {line -> println line}
-	proc.err.eachLine {line -> println 'ERROR: ' + line}
+	proc.err.eachLine {line -> println line}
 	proc.waitFor()
 
 	def exitValue = proc.exitValue()
@@ -28,7 +28,7 @@ task run_examples (dependsOn: ['build_module', 'run_tests']) << {
 
 	def proc = command.execute()
 	proc.in.eachLine  {line -> println line}
-	proc.err.eachLine {line -> println 'ERROR: ' + line}
+	proc.err.eachLine {line -> println line}
 	proc.waitFor()
 }
 
@@ -40,6 +40,6 @@ task run_tests (dependsOn: 'build_module') << {
 
 	def proc = command.execute()
 	proc.in.eachLine  {line -> println line}
-	proc.err.eachLine {line -> println 'ERROR: ' + line}
+	proc.err.eachLine {line -> println line}
 	proc.waitFor()
 }
